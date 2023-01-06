@@ -103,8 +103,11 @@ def start_training(character):
     return ('Тренировка окончена.')
 
 
-char_name: str = input('Напишите свое имя: ')
-print(f'Здравствуй, {char_name}!')
-print('Сейчас твоя выносливость - 80, атака - 5 и защита - 10.')
-char_class = choice_char_class(char_name)
-print(start_training(char_class))
+if __name__ == '__main__':
+    run_screensaver()
+    print('Приветствую тебя, искатель приключений!')
+    print('Прежде чем начать игру...')
+    char_name: str = input('...назови себя: ')
+    print('Сейчас твоя выносливость - 80, атака - 5 и защита - 10.')
+    char_class: str = choice_char_class(char_name)
+    print(start_training(char_class))
